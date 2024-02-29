@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Noto%20Sans%20Old%20North%20Arabian:700|Noto%20Sans%20Old%20North%20Arabian:400");
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #1e1001;
+    --background: #fef9f1;
+    --primary: #f4961a;
+    --secondary: #7687f9;
+    --accent: #f755f7;
+    --card: #ffd1a0;
+    --language: #faab44;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fef0e1;
+    --background: #0e0901;
+    --primary: #e5860b;
+    --secondary: #0d1237;
+    --accent: #aa08aa;
+    --card: #1e1001;
+    --language: #8f632a;
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans Old North Arabian";
+  font-weight: 400;
+  background-color: var(--background);
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Noto Sans Old North Arabian";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+.parentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+/*-------------------Greeting-------------*/
+.greetDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  gap: 20px;
+}
+.greetDiv h2 {
+  color: var(--text);
+}
+.greetDiv h2 span {
+  color: var(--primary);
+  filter: drop-shadow(0 0 5rem var(--primary));
+}
+.greetDiv img {
+  width: 125px;
+  border-radius: 100%;
+}
+
+/*--------------About-----------------*/
+.aboutDiv {
+  width: 75%;
+}
+.aboutDiv h3 {
+  display: flex;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.aboutDiv p {
+  font-size: larger;
+  text-align: justify;
+  color: var(--text);
+  padding: 10px;
+  background-color: var(--card);
+  border-radius: 10px;
+}
+
+/*--------------Skills------------------*/
+.skillsDiv {
+  width: 75%;
+}
+.skillsDiv h3 {
+  display: flex;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.skillContainer {
+  display: flex;
+  gap: 10px;
+}
+.DomainCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--card);
+  border-radius: 10px;
+}
+.DomainCard h4 {
+  color: var(--text);
+  font-size: 1rem;
+}
+.Languages {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.skillCard {
+  display: flex;
+  color: var(--text);
+  flex-wrap: wrap;
+  font-size: small;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--language);
+  border-radius: 20px;
+}
+
+/*-----------------Responsive------------------*/
+@media screen and (max-width: 840px) {
+  .parentContainer {
+    margin-top: 10%;
+  }
+  .greetDiv {
+    flex-direction: column;
+    gap: 0;
+  }
+  .greetDiv img {
+    width: 150px;
+  }
+  .greetDiv h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .skillContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .DomainCard {
+    width: 93%;
+  }
+}
