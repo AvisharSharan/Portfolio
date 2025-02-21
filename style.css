@@ -255,6 +255,32 @@ small { font-size: 0.75rem; }
 .projectCard:hover {
   transform: scale(1.05);
 }
+/* Socials Section */
+.socialsDiv {
+  width: 75%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.socialsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socialsContainer a {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.socialsContainer img {
+  width: 40px;
+  height: 40px;
+}
+
+.socialsContainer a:hover {
+  transform: scale(1.1);
+}
 
 /* Hover Effects */
 .skillCard:hover {
