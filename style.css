@@ -196,6 +196,13 @@ small { font-size: 0.75rem; }
   margin-top: 50px;
 }
 
+.projectsDiv h3 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
 .projectsContainer {
   display: flex;
   flex-wrap: wrap;
