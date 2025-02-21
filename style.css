@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Noto%20Sans%20Old%20North%20Arabian:700|Noto%20Sans%20Old%20North%20Arabian:400");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* Light & Dark Mode */
 @media (prefers-color-scheme: light) {
   :root {
     --text: #1e1001;
@@ -21,52 +23,38 @@
     --language: #8f632a;
   }
 }
+
+/* General Styling */
 body {
   padding: 0;
   margin: 0;
-  font-family: "Noto Sans Old North Arabian";
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   background-color: var(--background);
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Noto Sans Old North Arabian";
+h1, h2, h3, h4, h5 {
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
+  color: var(--text);
 }
 
 html {
   font-size: 100%;
-} /* 16px */
-
-h1 {
-  font-size: 4.21rem; /* 67.36px */
 }
 
-h2 {
-  font-size: 3.158rem; /* 50.56px */
-}
+/* Header Font Sizes */
+h1 { font-size: 4.21rem; }
+h2 { font-size: 3.158rem; }
+h3 { font-size: 2.369rem; }
+h4 { font-size: 1.777rem; }
+h5 { font-size: 1.333rem; }
 
-h3 {
-  font-size: 2.369rem; /* 37.92px */
-}
+small { font-size: 0.75rem; }
 
-h4 {
-  font-size: 1.777rem; /* 28.48px */
-}
-
-h5 {
-  font-size: 1.333rem; /* 21.28px */
-}
-
-small {
-  font-size: 0.75rem; /* 12px */
-}
-
+/* Parent Layout */
 .parentContainer {
   display: flex;
   justify-content: center;
@@ -75,57 +63,53 @@ small {
   margin-top: 5%;
 }
 
-/*-------------------Greeting-------------*/
+/* Greeting Section */
 .greetDiv {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: center;
   width: 75%;
-  gap: 20px;
 }
-.greetDiv h2 {
-  color: var(--text);
-}
+
 .greetDiv h2 span {
   color: var(--primary);
   filter: drop-shadow(0 0 5rem var(--primary));
 }
+
 .greetDiv img {
   width: 125px;
   border-radius: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/*--------------About-----------------*/
+/* About Section */
 .aboutDiv {
   width: 75%;
+  text-align: center;
 }
-.aboutDiv h3 {
-  display: flex;
-  color: var(--text);
-  margin-bottom: 10px;
-}
+
 .aboutDiv p {
   font-size: larger;
   text-align: justify;
   color: var(--text);
-  padding: 10px;
+  padding: 15px;
   background-color: var(--card);
   border-radius: 10px;
 }
 
-/*--------------Skills------------------*/
+/* Skills Section */
 .skillsDiv {
   width: 75%;
 }
-.skillsDiv h3 {
-  display: flex;
-  color: var(--text);
-  margin-bottom: 10px;
-}
+
 .skillContainer {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .DomainCard {
   display: flex;
   flex-direction: column;
@@ -134,47 +118,37 @@ small {
   background-color: var(--card);
   border-radius: 10px;
 }
-.DomainCard h4 {
-  color: var(--text);
-  font-size: 1rem;
-}
+
 .Languages {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
-}
-.skillCard {
-  display: flex;
-  color: var(--text);
-  flex-wrap: wrap;
-  font-size: small;
-  text-align: center;
-  padding: 10px;
-  background-color: var(--language);
-  border-radius: 20px;
+  justify-content: center;
 }
 
-/*-----------------Responsive------------------*/
+.skillCard {
+  padding: 12px 15px;
+  background-color: var(--language);
+  border-radius: 20px;
+  color: var(--text);
+  text-align: center;
+  font-size: small;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.skillCard:hover {
+  background-color: var(--primary);
+  color: #fff;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 840px) {
-  .parentContainer {
-    margin-top: 10%;
-  }
-  .greetDiv {
-    flex-direction: column;
-    gap: 0;
-  }
-  .greetDiv img {
-    width: 150px;
-  }
-  .greetDiv h2 {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-  .skillContainer {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .DomainCard {
-    width: 93%;
-  }
+  .parentContainer { margin-top: 10%; }
+  .greetDiv img { width: 150px; }
+  .greetDiv h2 { font-size: 2.5rem; }
+  .skillContainer { flex-direction: column; gap: 10px; }
+  .DomainCard { width: 93%; }
 }
