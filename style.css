@@ -329,4 +329,8 @@ small { font-size: 0.75rem; }
     flex-direction: column;
     align-items: center;
   }
+  .projectCard {
+    width: 90%;
+    margin: 10px auto; /* Ensure it's centered properly */
+  }
 }
