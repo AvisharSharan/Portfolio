@@ -22,4 +22,4 @@ Social media integration 🔗
 
 ## 📬 Contact
 
-Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/AvisharSharan) or [Twitter (X)](https://twitter.com/AvisharS).
+Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/avishars) or [Twitter (X)](https://twitter.com/AvisharS).
