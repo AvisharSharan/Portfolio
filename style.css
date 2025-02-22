@@ -22,6 +22,9 @@
     --card: #1e1001;
     --language: #8f632a;
   }
+  .socialsContainer img {
+    filter: invert(1);
+  }
 }
 
 /* General Styling */
