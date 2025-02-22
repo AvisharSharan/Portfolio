@@ -1,41 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
-/* Light & Dark Mode */
-@media (prefers-color-scheme: light) {
-  :root {
-    --text: #1e1001;
-    --background: #fef9f1;
-    --primary: #f4961a;
-    --secondary: #7687f9;
-    --accent: #f755f7;
-    --card: #ffd1a0;
-    --language: #faab44;
-  }
+/* Light Mode (Default) */
+:root {
+  --text: #1e1001;
+  --background: #fef9f1;
+  --primary: #f4961a;
+  --secondary: #7687f9;
+  --accent: #f755f7;
+  --card: #ffd1a0;
+  --language: #faab44;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #fef0e1;
-    --background: #0e0901;
-    --primary: #e5860b;
-    --secondary: #0d1237;
-    --accent: #aa08aa;
-    --card: #1e1001;
-    --language: #8f632a;
-  }
-  .socialsContainer img {
-    filter: invert(1);
-  }
+/* Dark Mode */
+.dark-mode {
+  --text: #fef0e1;
+  --background: #0e0901;
+  --primary: #e5860b;
+  --secondary: #0d1237;
+  --accent: #aa08aa;
+  --card: #1e1001;
+  --language: #8f632a;
+}
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+
+
+.theme-toggle img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.theme-toggle:hover img {
+  transform: scale(1.1);
+}
+
+.dark-mode .socialsContainer img {
+  filter: invert(1);
+}
+
+.dark-mode .theme-toggle img {
+  filter: invert(1);
 }
 
 /* General Styling */
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
   background-color: var(--background);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
   height: 100vh;
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5 {
@@ -191,7 +216,6 @@ small { font-size: 0.75rem; }
   }
 }
 
-
 /* Projects Section */
 .projectsDiv {
   width: 75%;
@@ -258,6 +282,7 @@ small { font-size: 0.75rem; }
 .projectCard:hover {
   transform: scale(1.05);
 }
+
 /* Socials Section */
 .socialsDiv {
   width: 75%;
