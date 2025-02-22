@@ -10,6 +10,7 @@
   --card: #ffd1a0;
   --language: #faab44;
 }
+
 /* Dark Mode */
 .dark-mode {
   --text: #fef0e1;
@@ -20,6 +21,7 @@
   --card: #1e1001;
   --language: #8f632a;
 }
+
 /* Theme Toggle Button */
 .theme-toggle {
   position: fixed;
@@ -30,8 +32,6 @@
   cursor: pointer;
   z-index: 100;
 }
-
-
 
 .theme-toggle img {
   width: 35px;
