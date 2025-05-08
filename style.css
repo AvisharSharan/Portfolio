@@ -2,31 +2,30 @@
 
 /* Light Mode (Default) */
 :root {
-  --text: #233b8d;
-  --background: #eef0f6;
-  --primary: #6e86db;
-  --secondary: #8c6edb;
-  --accent: #c36edb;
-  --card: #d8dff0; /* Adjusted for new palette */
-  --language: #a0b2e8; /* Adjusted for new palette */
+  --text: #1e1001;
+  --background: #fef9f1;
+  --primary: #f4961a;
+  --secondary: #7687f9;
+  --accent: #f755f7;
+  --card: #ffd1a0;
+  --language: #faab44;
 }
 
 /* Dark Mode */
 .dark-mode {
-  --text: #eef0f6;
-  --background: #1c2541; /* Derived dark background */
-  --primary: #8a9fe8; /* Lighter primary for dark mode */
-  --secondary: #a38ae8; /* Lighter secondary for dark mode */
-  --accent: #d38ae8; /* Lighter accent for dark mode */
-  --card: #2a3a75; /* Adjusted for new dark palette */
-  --language: #5c73c0; /* Adjusted for new dark palette */
+  --text: #fef0e1;
+  --background: #0e0901;
+  --primary: #e5860b;
+  --secondary: #0d1237;
+  --accent: #aa08aa;
+  --card: #1e1001;
+  --language: #8f632a;
 }
 
 /* Theme Toggle Button */
 .theme-toggle {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: fixed;
+  top: 20px;
   right: 20px;
   background: none;
   border: none;
@@ -59,9 +58,9 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  height: 100vh;
   scroll-behavior: smooth;
   transition: background-color 0.3s ease, color 0.3s ease;
-  padding-top: 70px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -89,132 +88,27 @@ small { font-size: 0.75rem; }
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  box-sizing: border-box;
+  margin-top: 5%;
 }
 
-/* Added Navbar Styling */
-.site-header {
-  background-color: var(--background);
-  border-bottom: 1px solid var(--secondary);
-  padding: 0 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.nav-logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--primary);
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: var(--text);
-  border-radius: 3px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Hero Section (Previously Greeting) */
-#hero {
-  min-height: calc(100vh - 70px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  margin-top: 0;
-}
-
-.hero-content {
+/* Greeting Section */
+.greetDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-}
-
-.heroDiv .imgContainer {
-  margin-bottom: 20px;
-}
-
-.heroDiv img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
-  border: 3px solid var(--primary);
-}
-
-.heroDiv h2 {
-  font-size: 2.8rem;
-  line-height: 1.3;
-}
-
-.heroDiv h2 span {
-  color: var(--primary);
-}
-
-/* Section Styling */
-section {
-  padding: 60px 20px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-section h3 {
-  font-size: 2.5rem;
-  color: var(--primary);
   text-align: center;
-  margin-bottom: 40px;
-  text-transform: uppercase;
+  width: 75%;
+}
+
+.greetDiv h2 span {
+  color: var(--primary);
+  filter: drop-shadow(0 0 5rem var(--primary));
+}
+
+.greetDiv img {
+  width: 125px;
+  border-radius: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* About Section */
@@ -224,18 +118,19 @@ section h3 {
 }
 
 .aboutDiv p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: larger;
   text-align: justify;
   color: var(--text);
-  padding: 20px;
+  padding: 15px;
   background-color: var(--card);
   border-radius: 10px;
 }
 
 /* Skills Section */
 .skillsDiv {
-  text-align: center;
+  width: 75%;
+  text-align: center; /* Align heading to the center */
+  margin-top: 50px;
 }
 
 .skillsDiv h3 {
@@ -256,7 +151,7 @@ section h3 {
 .DomainCard {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Align everything to center */
   width: 100%;
   max-width: 300px;
   padding: 15px;
@@ -323,7 +218,9 @@ section h3 {
 
 /* Projects Section */
 .projectsDiv {
+  width: 75%;
   text-align: center;
+  margin-top: 50px;
 }
 
 .projectsDiv h3 {
@@ -341,8 +238,7 @@ section h3 {
 }
 
 .projectCard {
-  flex: 1 1 300px;
-  max-width: 320px;
+  width: 300px;
   background-color: var(--card);
   padding: 15px;
   border-radius: 10px;
@@ -387,14 +283,11 @@ section h3 {
   transform: scale(1.05);
 }
 
-/* Contact Section (Previously Socials) */
-.contactDiv {
+/* Socials Section */
+.socialsDiv {
+  width: 75%;
   text-align: center;
-}
-
-.contactDiv p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
+  margin-top: 50px;
 }
 
 .socialsContainer {
@@ -425,102 +318,19 @@ section h3 {
   transition: 0.3s ease-in-out;
 }
 
-/* Footer Styling */
-.site-footer-bottom {
-  text-align: center;
-  padding: 20px;
-  background-color: var(--secondary);
-  color: var(--background);
-  margin-top: 40px;
-}
-
-.site-footer-bottom p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
 /* Responsive Design */
 @media screen and (max-width: 840px) {
-  .heroDiv img { width: 120px; height: 120px; }
-  .heroDiv h2 { font-size: 2.2rem; }
-}
-
-@media screen and (max-width: 768px) {
-  .nav-links {
-    display: none;
+  .parentContainer { margin-top: 10%; }
+  .greetDiv img { width: 150px; }
+  .greetDiv h2 { font-size: 2.5rem; }
+  .skillContainer { flex-direction: column; gap: 10px; }
+  .DomainCard { width: 93%; }
+  .projectsContainer {
     flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: var(--background);
-    border-top: 1px solid var(--secondary);
-    padding: 10px 0;
+    align-items: center;
   }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-  }
-
-  .theme-toggle {
-    right: 60px;
-  }
-
-  .heroDiv h2 {
-    font-size: 2rem;
-  }
-
-  section h3 {
-    font-size: 2rem;
-  }
-
   .projectCard {
-    flex-basis: 100%;
-    max-width: 90%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .heroDiv h2 {
-    font-size: 1.8rem;
-  }
-
-  .aboutDiv p, .contactDiv p {
-    font-size: 1rem;
-  }
-
-  .theme-toggle img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .menu-toggle span {
-    width: 22px;
-    height: 2px;
-  }
-  .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(4px, 4px);
-  }
-  .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -4px);
+    width: 90%;
+    margin: 10px auto; /* Ensure it's centered properly */
   }
 }

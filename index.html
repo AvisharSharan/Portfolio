@@ -1,166 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="static/images/logo.png" type="image/png"> <!-- Added favicon -->
     <script defer src="script.js"></script>
     <title>Avishar Sharan | Developer & Problem Solver</title>
-</head>
-<body>
-    <header class="site-header">
-        <nav class="navbar">
-            <div class="nav-logo">
-                <a href="#">Avishar Sharan</a> <!-- Or your logo image -->
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                <img id="themeIcon" src="static/icons/sun.svg" alt="Toggle Theme" />
-            </button>
-            <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+  </head>
+  <body>
+    <header>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+        <img id="themeIcon" src="static/icons/sun.svg" alt="Toggle Theme" />
+      </button>
     </header>
+    <div class="parentContainer">
+      <!-- Greeting Section -->
+      <section class="greetDiv">
+        <div class="imgContainer">
+          <img src="static/images/Avishar.jpeg" alt="Avishar Sharan's profile picture" />
+        </div>
+        <h2>Hi,<br />I am <span>Avishar Sharan</span>.<br /></h2>
+      </section>
 
-    <main class="parentContainer">
-        <!-- Hero Section (Previously Greeting) -->
-        <section id="hero" class="heroDiv greetDiv">
-            <div class="hero-content">
-                <div class="imgContainer">
-                    <img src="static/images/Avishar.jpeg" alt="Avishar Sharan's profile picture" />
-                </div>
-                <h2>Hi,<br />I am <span>Avishar Sharan</span>.<br />A Developer & Problem Solver.</h2>
+      <!-- About Section -->
+      <section class="aboutDiv">
+        <h3>About Me</h3>
+        <p>
+          Hey! I'm Avishar Sharan, a computer science student who loves building things—whether it’s a web app, a game, or just exploring new tech. I’m currently pursuing my B.Tech at SRM Institute of Science and Technology, and I’m always looking for new ways to learn and improve my skills.
+        </p>
+        <p>
+          I enjoy creating games using Unity and C# and have a strong interest in competitive programming and problem-solving—it’s always fun to tackle a tricky challenge.
+        </p>
+        <p>
+          Right now, I’m focused on learning new technologies, building cool projects, and growing as a developer.
+        </p>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="skillsDiv">
+        <h3>Skills</h3>
+        <div class="skillContainer">
+          <div class="DomainCard">
+            <h4>Database</h4>
+            <div class="Languages">
+              <div class="skillCard">MySQL</div>
+              <div class="skillCard">MongoDB</div>
             </div>
-        </section>
+          </div>
 
-        <!-- About Section -->
-        <section id="about" class="aboutDiv">
-            <h3>About Me</h3>
-            <p>
-                Hey! I'm Avishar Sharan, a computer science student who loves building things—whether it’s a web app, a game, or just exploring new tech. I’m currently pursuing my B.Tech at SRM Institute of Science and Technology, and I’m always looking for new ways to learn and improve my skills.
-            </p>
-            <p>
-                I enjoy creating games using Unity and C# and have a strong interest in competitive programming and problem-solving—it’s always fun to tackle a tricky challenge.
-            </p>
-            <p>
-                Right now, I’m focused on learning new technologies, building cool projects, and growing as a developer.
-            </p>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skillsDiv">
-            <h3>Skills</h3>
-            <div class="skillContainer">
-                <div class="DomainCard">
-                    <h4>Database</h4>
-                    <div class="Languages">
-                        <div class="skillCard">MySQL</div>
-                        <div class="skillCard">MongoDB</div>
-                    </div>
-                </div>
-
-                <div class="DomainCard">
-                    <h4>Front End</h4>
-                    <div class="Languages">
-                        <div class="skillCard">HTML</div>
-                        <div class="skillCard">CSS</div>
-                        <div class="skillCard">JavaScript</div>
-                    </div>
-                </div>
-
-                <div class="DomainCard">
-                    <h4>Back End</h4>
-                    <div class="Languages">
-                        <div class="skillCard">Flask</div>
-                        <div class="skillCard">Django</div>
-                    </div>
-                </div>
-
-                <div class="DomainCard">
-                    <h4>Programming</h4>
-                    <div class="Languages">
-                        <div class="skillCard">Python</div>
-                        <div class="skillCard">C/C++</div>
-                        <div class="skillCard">Java</div>
-                    </div>
-                </div>
-
-                <div class="DomainCard">
-                    <h4>Game Development</h4>
-                    <div class="Languages">
-                        <div class="skillCard">Unity Engine</div>
-                        <div class="skillCard">C#</div>
-                    </div>
-                </div>
-
-                <div class="DomainCard">
-                    <h4>DevOps & Tools</h4>
-                    <div class="Languages">
-                        <div class="skillCard">Git</div>
-                        <div class="skillCard">GitHub</div>
-                    </div>
-                </div>
+          <div class="DomainCard">
+            <h4>Front End</h4>
+            <div class="Languages">
+              <div class="skillCard">HTML</div>
+              <div class="skillCard">CSS</div>
+              <div class="skillCard">JavaScript</div>
             </div>
-        </section>
+          </div>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projectsDiv">
-            <h3>PROJECTS</h3>
-            <div class="projectsContainer">
-                <div class="projectCard">
-                    <img src="static/images/pomodoro-timer.png" alt="Pomodoro Timer" />
-                    <h4>Pomodoro Timer</h4>
-                    <p>A simple and effective timer to boost productivity using the Pomodoro technique.</p>
-                    <a href="https://github.com/AvisharSharan/PomodoroTimer" target="_blank" rel="noopener noreferrer">View Project</a>
-                </div>
-
-                <div class="projectCard">
-                    <img src="static/images/bomb-dodge.png" alt="Bomb Dodge Game" />
-                    <h4>Bomb Dodge</h4>
-                    <p>A fast-paced 2D game where players dodge bombs and aim for the highest score.</p>
-                    <a href="https://avishardev.itch.io/bomb-dodge" target="_blank" rel="noopener noreferrer">Play Now</a>
-                </div>
-                <!-- Add more project cards here if needed -->
+          <div class="DomainCard">
+            <h4>Back End</h4>
+            <div class="Languages">
+              <div class="skillCard">Flask</div>
+              <div class="skillCard">Django</div>
             </div>
-        </section>
+          </div>
 
-        <!-- Contact Section (Previously Socials) -->
-        <section id="contact" class="contactDiv socialsDiv"> <!-- Combined class for now, can be refactored in CSS -->
-            <h3>Get in Touch</h3>
-            <p>Feel free to reach out if you'd like to collaborate or just say hi!</p>
-            <div class="socialsContainer">
-                <a href="https://github.com/AvisharSharan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <img src="static/icons/github.svg" alt="GitHub" />
-                </a>
-                <a href="https://linkedin.com/in/avishars" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <img src="static/icons/linkedin.svg" alt="LinkedIn" />
-                </a>
-                <a href="https://avishardev.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="Itch.io">
-                    <img src="static/icons/itchio.svg" alt="Itch.io" />
-                </a>
-                <a href="https://twitter.com/AvisharS" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                    <img src="static/icons/twitter.svg" alt="Twitter (X)" />
-                </a>
-                <a href="https://instagram.com/_avishar" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <img src="static/icons/instagram.svg" alt="Instagram" />
-                </a>
-                <!-- Consider adding an email link: <a href="mailto:your.email@example.com">your.email@example.com</a> -->
+          <div class="DomainCard">
+            <h4>Programming</h4>
+            <div class="Languages">
+              <div class="skillCard">Python</div>
+              <div class="skillCard">C/C++</div>
+              <div class="skillCard">Java</div>
             </div>
-        </section>
-    </main>
+          </div>
 
-    <footer class="site-footer-bottom">
-        <p>&copy; <span id="currentYear"></span> Avishar Sharan. All rights reserved.</p>
-        <!-- You can add a link back to the top or other footer links here -->
-    </footer>
-</body>
+          <div class="DomainCard">
+            <h4>Game Development</h4>
+            <div class="Languages">
+              <div class="skillCard">Unity Engine</div>
+              <div class="skillCard">C#</div>
+            </div>
+          </div>
+
+          <div class="DomainCard">
+            <h4>DevOps & Tools</h4>
+            <div class="Languages">
+              <div class="skillCard">Git</div>
+              <div class="skillCard">GitHub</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projectsDiv">
+        <h3>PROJECTS</h3>
+        <div class="projectsContainer">
+          <div class="projectCard">
+            <img src="static/images/pomodoro-timer.png" alt="Pomodoro Timer" />
+            <h4>Pomodoro Timer</h4>
+            <p>A simple and effective timer to boost productivity using the Pomodoro technique.</p>
+            <a href="https://github.com/AvisharSharan/PomodoroTimer" target="_blank">View Project</a>
+          </div>
+
+          <div class="projectCard">
+            <img src="static/images/bomb-dodge.png" alt="Bomb Dodge Game" />
+            <h4>Bomb Dodge</h4>
+            <p>A fast-paced 2D game where players dodge bombs and aim for the highest score.</p>
+            <a href="https://avishardev.itch.io/bomb-dodge" target="_blank">Play Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Links -->
+      <section class="socialsDiv">
+        <h3>Find Me Here</h3>
+        <div class="socialsContainer">
+          <a href="https://github.com/AvisharSharan" target="_blank">
+            <img src="static/icons/github.svg" alt="GitHub" />
+          </a>
+          <a href="https://linkedin.com/in/avishars" target="_blank">
+            <img src="static/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://avishardev.itch.io/" target="_blank">
+            <img src="static/icons/itchio.svg" alt="Itch.io" />
+          </a>
+          <a href="https://twitter.com/AvisharS" target="_blank">
+            <img src="static/icons/twitter.svg" alt="Twitter (X)" />
+          </a>
+          <a href="https://instagram.com/_avishar" target="_blank">
+            <img src="static/icons/instagram.svg" alt="Instagram" />
+          </a>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
